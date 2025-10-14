@@ -1,0 +1,173 @@
+/* =========================
+   VARIÁVEIS CSS - PALETA AJUSTADA
+========================= */
+:root {
+    /* Backgrounds */
+    --bg-main: #0a0a0a;
+    --bg-detail: #1c1f18;
+
+    /* Textos */
+    --text-main: #ffffff;
+
+    /* Botões / Gradientes */
+    --btn-primary: #7ffa0c;
+    --btn-secondary: #d4ff1a;
+
+    /* Pequenos detalhes */
+    --accent-purple: #8f23ac;
+    --dark-green: #03a603;
+}
+
+/* =========================
+   RESET BÁSICO
+========================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+/* Elementos multimídia */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* =========================
+   LAYOUT & CONTAINERS
+========================= */
+
+/* Container centralizado e responsivo */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Grid básico mobile first */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.grid-2 {
+    grid-template-columns: 1fr;
+}
+
+.grid-3 {
+    grid-template-columns: 1fr;
+}
+
+/* Flex helpers */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: var(--btn-primary);
+    color: var(--bg-main);
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, var(--btn-primary), var(--btn-secondary));
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* =========================
+   MEDIA QUERIES (MOBILE FIRST)
+========================= */
+
+/* Tablet / Small Notebook */
+@media (min-width: 600px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Notebook / Desktop normal */
+@media (min-width: 1024px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* PC ultrawide */
+@media (min-width: 1440px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* TV / telas muito grandes */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+        padding: 0 2rem;
+    }
+}
