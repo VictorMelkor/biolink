@@ -1,31 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Melkor - Link na Bio</title>
-    <!-- Link para o CSS modular -->
+    <title>Victor Melkor | Desenvolvedor Web Full Stack</title>
+    <meta name="description" content="Portfólio de Victor Melkor - Desenvolvedor Web Full Stack. Confira meus projetos, serviços e entre em contato para desenvolvimento de sites, landing pages e soluções web.">
+    <meta name="keywords" content="Desenvolvedor Web, Full Stack, HTML, CSS, JavaScript, Django, Portfólio, Landing Page, Victor Melkor">
+    <meta name="author" content="Victor Melkor">
     <link rel="stylesheet" href="assets/css/main.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+
+</head>
 <body>
-    <!-- Header -->
-    <header class="container flex flex-column flex-center">
-        <div class="profile-photo-placeholder"></div>
-        <h1 class="profile-name">Victor Melkor</h1>
-        <p class="profile-tagline">Desenvolvedor Web Full Stack</p>
+    <!-- Header / Hero -->
+    <header class="container flex flex-column flex-center" id="hero">
+        <div class="hero-content grid grid-2">
+            <div class="hero-text">
+                <h2>Desenvolvedor <span class="text-highlight">Web Full Stack</span></h2>
+                <p>Transformo ideias em sites funcionais e visualmente impressionantes. Portfólio focado em soluções reais, com atenção à performance, UX e responsividade.</p>
+                <ul>
+                    <li>Sites e landing pages profissionais</li>
+                    <li>Desenvolvimento frontend e backend com Django</li>
+                    <li>Experiência real em projetos aplicados</li>
+                </ul>
+                <a href="#form" class="btn">Contrate-me</a>
+                <p class="note">Entre em contato rápido e direto</p>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/image.png" alt="Victor Melkor, desenvolvedor Web Full Stack">
+            </div>
+        </div>
     </header>
 
-    <!-- Main: links ou módulos -->
-    <main class="container grid grid-2">
-        <!-- Cada módulo/link será adicionado aqui -->
-    </main>
+    <!-- Portfólio / Destaques -->
+    <section class="container" id="portfolio">
+        <h2>Projetos Recentes</h2>
+        <div class="grid grid-3">
+            <div class="portfolio-item">
+                <img src="assets/images/image.png" alt="Projeto 1">
+                <h3>Sistema de Agendamento</h3>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/image.png" alt="Projeto 2">
+                <h3>E-commerce funcional</h3>
+            </div>
+            <div class="portfolio-item">
+                <img src="assets/images/image.png" alt="Projeto 3">
+                <h3>Painel Admin interativo</h3>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="container flex flex-center">
-        <p>💻 Criado por Victor Melkor</p>
-    </footer>
+    <!-- Serviços -->
+    <section class="container" id="services">
+        <h2>Serviços Oferecidos</h2>
+        <div class="grid grid-3">
+            <div class="service-item">
+                <h3>Desenvolvimento Frontend</h3>
+                <p>HTML, CSS e JavaScript modernos, sites responsivos e mobile-first, com foco em UX e performance.</p>
+            </div>
+            <div class="service-item">
+                <h3>Desenvolvimento Backend</h3>
+                <p>Django/Python para aplicações robustas, integrações com banco de dados, APIs e sistemas escaláveis.</p>
+            </div>
+            <div class="service-item">
+                <h3>Landing Pages e Portfólio</h3>
+                <p>Landing pages otimizadas para conversão e portfólios digitais que destacam projetos e serviços.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos / Social Proof -->
+    <section class="container" id="social-proof">
+        <h2>O que meus clientes dizem</h2>
+        <div class="grid grid-2">
+            <div class="testimonial">
+                <p>"Victor entregou um site incrível, com design e performance impecáveis. Recomendo fortemente!"</p>
+                <span>- Cliente 1</span>
+            </div>
+            <div class="testimonial">
+                <p>"Landing page com alta conversão e integração perfeita. Trabalho muito profissional."</p>
+                <span>- Cliente 2</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="container flex flex-column flex-center" id="cta-final">
+        <h2>Pronto para <span class="text-highlight">transformar seu projeto em realidade</span>?</h2>
+        <p>Entre em contato agora e vamos criar juntos soluções digitais de alto impacto.</p>
+        <a href="#form" class="btn">Contrate-me</a>
+    </section>
+
+    <!-- Formulário / Contato -->
+    <section class="container" id="form">
+        <form class="grid grid-2">
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Seu email" required>
+            </div>
+            <div class="full-width">
+                <label for="mensagem">Mensagem / Observações</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+            </div>
+            <div class="full-width">
+                <button type="submit" class="btn btn-gradient">Enviar</button>
+            </div>
+        </form>
+        <nav class="container flex flex-center">
+            <a href="#hero">Sobre mim</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#services">Serviços</a>
+            <a href="#form">Contato</a>
+        </nav>
+    </section>
 </body>
-
 </html>

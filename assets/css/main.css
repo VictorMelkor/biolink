@@ -1,29 +1,30 @@
-/* =========================
-   VARIÁVEIS CSS - PALETA AJUSTADA
-========================= */
+/* ========================= VARIÁVEIS CSS - PALETA FINAL ========================= */
 :root {
     /* Backgrounds */
-    --bg-main: #0a0a0a;
-    --bg-detail: #1c1f18;
+    --bg-main: #050505; /* Preto profundo */
+    --bg-detail: #0E0E0E; /* Sections alternadas */
 
     /* Textos */
-    --text-main: #ffffff;
+    --text-main: #F5F5F5; /* Texto principal */
+    --text-secondary: #BBBBBB; /* Texto secundário */
+    --text-highlight: #D0FF42; /* Palavras-chave / headings secundários */
 
     /* Botões / Gradientes */
-    --btn-primary: #7ffa0c;
-    --btn-secondary: #d4ff1a;
+    --btn-primary: #89FF00; /* Verde-lima vívido */
+    --btn-secondary: #B6FF00; /* Hover / ação ativa */
+    --btn-text: #0A0A0A; /* Texto sobre botões verdes ou gradientes */
+    --gradient-main: linear-gradient(90deg, #89FF00 0%, #00FFA8 100%);
+    --gradient-alt: linear-gradient(135deg, rgba(137,255,0,0.15) 0%, rgba(0,255,168,0.05) 100%);
 
-    /* Pequenos detalhes */
-    --accent-purple: #8f23ac;
-    --dark-green: #03a603;
+    /* Links / microações */
+    --link-color: #B6FF00;
+
+    /* Bordas e divisores sutis */
+    --border-subtle: #1A1A1A;
 }
 
-/* =========================
-   RESET BÁSICO
-========================= */
-*,
-*::before,
-*::after {
+/* ========================= RESET BÁSICO ========================= */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,7 +36,7 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     min-height: 100vh;
     width: 100%;
@@ -43,21 +44,19 @@ body {
     color: var(--text-main);
 }
 
+/* Tipografia para títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Permanent Marker', cursive, sans-serif;
+}
+
 /* Elementos multimídia */
-img,
-picture,
-video,
-canvas,
-svg {
+img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
     font: inherit;
 }
 
@@ -66,15 +65,11 @@ a {
     color: inherit;
 }
 
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
 
-/* =========================
-   LAYOUT & CONTAINERS
-========================= */
-
+/* ========================= LAYOUT & CONTAINERS ========================= */
 /* Container centralizado e responsivo */
 .container {
     width: 100%;
@@ -89,31 +84,15 @@ ol {
     gap: 1rem;
 }
 
-.grid-2 {
-    grid-template-columns: 1fr;
-}
-
-.grid-3 {
-    grid-template-columns: 1fr;
-}
+.grid-2 { grid-template-columns: 1fr; }
+.grid-3 { grid-template-columns: 1fr; }
 
 /* Flex helpers */
-.flex {
-    display: flex;
-}
+.flex { display: flex; }
+.flex-center { justify-content: center; align-items: center; }
+.flex-column { flex-direction: column; }
 
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-/* =========================
-   BOTÕES
-========================= */
+/* ========================= BOTÕES ========================= */
 .btn {
     display: inline-block;
     padding: 0.8rem 1.2rem;
@@ -135,39 +114,24 @@ ol {
     filter: brightness(1.1);
 }
 
-/* =========================
-   MEDIA QUERIES (MOBILE FIRST)
-========================= */
-
+/* ========================= MEDIA QUERIES (MOBILE FIRST) ========================= */
 /* Tablet / Small Notebook */
 @media (min-width: 600px) {
-    .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Notebook / Desktop normal */
 @media (min-width: 1024px) {
-    .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .grid-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* PC ultrawide */
 @media (min-width: 1440px) {
-    .grid-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* TV / telas muito grandes */
 @media (min-width: 1920px) {
-    .container {
-        max-width: 1600px;
-        padding: 0 2rem;
-    }
+    .container { max-width: 1600px; padding: 0 2rem; }
 }
